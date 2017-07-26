@@ -1,4 +1,4 @@
-# path-to-re
+# hyperapp-routes
 
 > A router that supports both hash-based and history-API-based routing
 
