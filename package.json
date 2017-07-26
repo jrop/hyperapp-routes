@@ -1,0 +1,33 @@
+{
+  "name": "hyperapp-routes",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "_prettier": "prettier --parser typescript --use-tabs --no-semi --single-quote --trailing-comma es5 --no-bracket-spacing --jsx-bracket-same-line 'src/**/*.{js,ts,tsx}'",
+    "build": "NODE_ENV=production webpack",
+    "build:watch": "webpack -w --progress",
+    "lint": "npm run _prettier -- -l",
+    "lint:fix": "npm run _prettier -- --write",
+    "precommit": "npm run lint",
+    "prepare": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.2.1",
+    "husky": "^0.14.3",
+    "hyperapp": "^0.10.1",
+    "path-to-re": "^0.0.2",
+    "prettier": "^1.5.3",
+    "typescript": "^2.4.1",
+    "webpack": "^3.0.0",
+    "webpack-configify": "0.0.5"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/index.js.map"
+  ]
+}

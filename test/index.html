@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="../node_modules/hyperapp/dist/hyperapp.js"></script>
+	<script src="../lib/index.js"></script>
+</head>
+
+<body>
+	<script>
+		const { h, app } = hyperapp
+		const s = (t, ...c) => h(t, null, c)
+
+		const $r = routes({ hash: true })
+			.path('/', (state, actions) => s('div',
+				s('h1', 'Home'),
+				h('a', { onclick: () => actions.router.go('/about'), href: 'javascript: void(0)' }, 'About')))
+			
+			.path('/about', (state, actions) => s('div',
+				s('h1', 'About'),
+				h('a', { onclick: () => actions.router.go('/'), href: 'javascript: void(0)' }, 'Home')))
+			
+			.path('/hello/:name?', (state, actions) => s('div',
+				s('h1', 'Hello ' + (state.router.params.name || 'World') + '!'),
+				h('a', { onclick: () => actions.router.go('/'), href: 'javascript: void(0)' }, 'Home')))
+		
+		app({
+			mixins: [$r]
+		})
+	</script>
+</body>
+
+</html>
