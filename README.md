@@ -1,5 +1,7 @@
 # hyperapp-routes
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jrop/hyperapp-routes.svg)](https://greenkeeper.io/)
+
 > A router that supports both hash-based and history-API-based routing
 
 # Installation
